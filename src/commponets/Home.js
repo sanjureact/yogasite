@@ -1,5 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import img1 from "../assets/gallery-1.jpg";
+import img2 from "../assets/gallery-2.jpg";
+import img3 from "../assets/gallery-3.jpg";
+import img4 from "../assets/gallery-4.jpg";
+import img5 from "../assets/event-3.jpg";
 
 export default function Home() {
   return (
@@ -9,6 +18,14 @@ export default function Home() {
       <section
         className="hero d-flex flex-column justify-content-center align-items-center"
         id="home"
+        style={{
+          backgroundImage: `url(${img5})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          width: "100vw",
+          height: "50px",
+        }}
       >
         <div className="bg-overlay">
           <video autoPlay muted loop id="myVideo">
@@ -23,7 +40,11 @@ export default function Home() {
                 <h4
                   data-aos="fade-up"
                   data-aos-delay="300"
-                  //   style="font-family: 'Lora', serif; font-weight: 600; letter-spacing: 2px;"
+                  style={{
+                    fontFamily: "Lora",
+                    fontWeight: "600",
+                    letterSpacing: "2px",
+                  }}
                 >
                   For your Inner Peace
                 </h4>
@@ -37,7 +58,7 @@ export default function Home() {
                   Be Alive. Be Strong. Be Fit. Be Relaxed. Be Happy. Just be.
                 </h1>
 
-                <img
+                {/* <img
                   data-aos="fade-up"
                   data-aos-delay="600"
                   src="Apple_Store.png"
@@ -50,12 +71,31 @@ export default function Home() {
                   src="google-play-app.png"
                   alt="Play_store"
                   className="mt-3 down play-store"
-                />
+                /> */}
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* <section>
+        <div className="container">
+          <Carousel infiniteLoop useKeyboardArrows autoPlay interval={1000}>
+            <div>
+              <img src={img1} />
+            </div>
+            <div>
+              <img src={img2} />
+            </div>
+            <div>
+              <img src={img3} />
+            </div>
+            <div>
+              <img src={img4} />{" "}
+            </div>
+            <img src={img5} />
+          </Carousel>
+        </div>
+      </section> */}
       <section className="ftco-section bg-light" id="feature">
         <div className="container">
           <div className="row">
@@ -67,7 +107,7 @@ export default function Home() {
               <div className="offer-deal text-center">
                 <div
                   className="img"
-                  // style="background-image: url(gallery-1.jpg)"
+                  style={{ backgroundImage: `url(${img1})` }}
                 ></div>
                 <div className="text mt-4">
                   <h3 className="mb-4">Power Yoga</h3>
@@ -77,8 +117,8 @@ export default function Home() {
                     exercitationem. Ratione, rerum illo? Molestiae, pariatur!
                   </p>
                   <p>
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="btn custom-btn bg-color mt-3"
                       data-aos="fade-up"
                       data-aos-delay="100"
@@ -86,7 +126,7 @@ export default function Home() {
                       data-target="#membershipForm"
                     >
                       Learn moref
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -99,7 +139,7 @@ export default function Home() {
               <div className="offer-deal text-center">
                 <div
                   className="img"
-                  // style="background-image: url(gallery-2.jpg)"
+                  style={{ backgroundImage: `url(${img2})` }}
                 ></div>
                 <div className="text mt-4">
                   <h3 className="mb-4">Meditation Class</h3>
@@ -109,8 +149,8 @@ export default function Home() {
                     exercitationem. Ratione, rerum illo? Molestiae, pariatur!
                   </p>
                   <p>
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="btn custom-btn bg-color mt-3"
                       data-aos="fade-up"
                       data-aos-delay="100"
@@ -118,7 +158,7 @@ export default function Home() {
                       data-target="#membershipForm"
                     >
                       Learn more <span className="fa fa-arrow-right"></span>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -131,7 +171,7 @@ export default function Home() {
               <div className="offer-deal text-center">
                 <div
                   className="img"
-                  // style="background-image: url(gallery-3.jpg)"
+                  style={{ backgroundImage: `url(${img3})` }}
                 ></div>
                 <div className="text mt-4">
                   <h3 className="mb-4">Aerobics Class</h3>
@@ -141,8 +181,8 @@ export default function Home() {
                     exercitationem. Ratione, rerum illo? Molestiae, pariatur!
                   </p>
                   <p>
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="btn custom-btn bg-color mt-3"
                       data-aos="fade-up"
                       data-aos-delay="100"
@@ -150,7 +190,7 @@ export default function Home() {
                       data-target="#membershipForm"
                     >
                       Learn more <span className="fa fa-arrow-right"></span>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -163,7 +203,7 @@ export default function Home() {
               <div className="offer-deal text-center">
                 <div
                   className="img"
-                  // style="background-image: url(gallery-4.jpg)"
+                  style={{ backgroundImage: `url(${img4})` }}
                 ></div>
                 <div className="text mt-4">
                   <h3 className="mb-4">Spiritual Yoga</h3>
@@ -173,8 +213,8 @@ export default function Home() {
                     exercitationem. Ratione, rerum illo? Molestiae, pariatur!
                   </p>
                   <p>
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="btn custom-btn bg-color mt-3"
                       data-aos="fade-up"
                       data-aos-delay="100"
@@ -182,7 +222,7 @@ export default function Home() {
                       data-target="#membershipForm"
                     >
                       Learn more <span className="fa fa-arrow-right"></span>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -190,6 +230,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

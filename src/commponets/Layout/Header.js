@@ -1,66 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
-      <div className="navbar navbar-expand-lg fixed-top">
-        <div className="container">
-          <a href="index.html" className="navbar-brand">
-            Om Mantra
-          </a>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-lg-auto">
-              <li className="nav-item">
-                <a href="#home" className="nav-link smoothScroll">
-                  Home
-                </a>
-              </li>
+      <header>
+        <div className="navbar navbar-expand-lg fixed-top">
+          <div className="container">
+            <Link to="/home" className="navbar-brand">
+              S Yoga
+            </Link>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-lg-auto">
+                <li className="nav-item">
+                  <Link to="#home" className="nav-link smoothScroll">
+                    Home
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <a href="#about" className="nav-link smoothScroll">
-                  About
-                </a>
-              </li>
+                <li className="nav-item">
+                  <Link to="#gallery" className="nav-link smoothScroll">
+                    Gallery
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <a href="#gallery" className="nav-link smoothScroll">
-                  Gallery
-                </a>
-              </li>
+                <li className="nav-item">
+                  <Link to="#className" className="nav-link smoothScroll">
+                    classes
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <a href="#className" className="nav-link smoothScroll">
-                  classNameNamees
-                </a>
-              </li>
+                <li className="nav-item">
+                  <Link to="#schedule" className="nav-link smoothScroll">
+                    Schedules
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <a href="#schedule" className="nav-link smoothScroll">
-                  Schedules
-                </a>
-              </li>
+                <li className="nav-item">
+                  <Link to="#team" className="nav-link smoothScroll">
+                    Our Team
+                  </Link>
+                </li>
 
-              <li className="nav-item">
-                <a href="#team" className="nav-link smoothScroll">
-                  Our Team
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a href="#event" className="nav-link smoothScroll">
-                  Events
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a href="#contact" className="nav-link smoothScroll">
-                  Contacts
-                </a>
-              </li>
-            </ul>
+                <li className="nav-item">
+                  <Link to="#event" className="nav-link smoothScroll">
+                    Events
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="#about" className="nav-link smoothScroll">
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="#contact" className="nav-link smoothScroll">
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }
