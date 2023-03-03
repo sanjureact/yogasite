@@ -240,12 +240,12 @@ export default function Home() {
       </section>
       <Gallary />
       <About />
-      <Footer />
       <SessionClass />
       <Schedule />
       <OurTeam />
       <Event />
       <Contact />
+      <Footer />
     </>
   );
 }
