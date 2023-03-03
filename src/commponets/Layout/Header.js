@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/logo4.jpg";
 export default function Header() {
   return (
     <>
@@ -8,7 +8,13 @@ export default function Header() {
         <div className="navbar navbar-expand-lg fixed-top">
           <div className="container">
             <Link to="/home" className="navbar-brand">
-              S Yoga
+              <img
+                src={logo}
+                alt="snj"
+                style={{
+                  height: " 68px",
+                }}
+              />
             </Link>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ml-lg-auto">
@@ -26,7 +32,7 @@ export default function Header() {
 
                 <li className="nav-item">
                   <Link to="#className" className="nav-link smoothScroll">
-                    classes
+                    Session-Classes
                   </Link>
                 </li>
 
@@ -50,6 +56,11 @@ export default function Header() {
                 <li className="nav-item">
                   <Link to="#about" className="nav-link smoothScroll">
                     About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="#about" className="nav-link smoothScroll">
+                    Blog
                   </Link>
                 </li>
                 <li className="nav-item">

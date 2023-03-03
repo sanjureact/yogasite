@@ -9,6 +9,14 @@ import img2 from "../assets/gallery-2.jpg";
 import img3 from "../assets/gallery-3.jpg";
 import img4 from "../assets/gallery-4.jpg";
 import img5 from "../assets/event-3.jpg";
+import vedio1 from "../assets/video.mp4";
+import About from "./About";
+import Gallary from "./Gallary";
+import SessionClass from "./SessionClass";
+import Schedule from "./Schedule";
+import OurTeam from "./OurTeam";
+import Contact from "./Contact";
+import Event from "./Event";
 
 export default function Home() {
   return (
@@ -18,18 +26,18 @@ export default function Home() {
       <section
         className="hero d-flex flex-column justify-content-center align-items-center"
         id="home"
-        style={{
-          backgroundImage: `url(${img5})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          width: "100vw",
-          height: "50px",
-        }}
+        // style={{
+        //   backgroundImage: `url(${img5})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        //   width: "100vw",
+        //   height: "50px",
+        // }}
       >
         <div className="bg-overlay">
           <video autoPlay muted loop id="myVideo">
-            <source src="video.mp4" type="video/mp4" />
+            <source src={vedio1} type="video/mp4" />
           </video>
         </div>
 
@@ -230,7 +238,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Gallary />
+      <About />
       <Footer />
+      <SessionClass />
+      <Schedule />
+      <OurTeam />
+      <Event />
+      <Contact />
     </>
   );
 }
